@@ -3,7 +3,7 @@ import type { Flashcard } from '../types';
 
 // The API key MUST be handled as an environment variable.
 // It is assumed to be available in the execution environment via process.env.API_KEY.
-const API_KEY = process.env.API_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 if (!API_KEY) {
   console.warn("API Key for Gemini not found. Analysis feature will provide a fallback message.");
